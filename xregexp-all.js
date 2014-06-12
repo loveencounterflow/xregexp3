@@ -466,6 +466,8 @@ var XRegExp = (function(undefined) {
  * XRegExp(/regex/);
  */
     self = function(pattern, flags) {
+        console.log( '©343 XRegExp3', pattern );
+        var _X_pattern = pattern;
         var context = {
                 hasNamedCapture: false,
                 captureNames: []
@@ -539,11 +541,15 @@ var XRegExp = (function(undefined) {
         }
 
         key = patternCache[key];
-        return augment(new RegExp(key.pattern, key.flags), key.captures, /*addProto*/ true);
+        var R = augment(new RegExp(key.pattern, key.flags), key.captures, /*addProto*/ true);
+        R._X_pattern = _X_pattern;
+        return R;
     };
 
 // Add `RegExp.prototype` to the prototype chain
     self.prototype = new RegExp;
+
+    self.prototype.toString = function() { return this._X_pattern; }
 
 /* ==============================
  * Public properties

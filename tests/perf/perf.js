@@ -191,9 +191,8 @@
 
     (function() {
         var str = Array(30 + 1).join('hello world ') + 'http://xregexp.com/path/to/file?q=1';
-        var pattern = '\\b([^:/?\\s]+)://([^/?\\s]+)([^?\\s]*)\\??([^\\s]*)';
-        var regexp = new RegExp(pattern);
-        var xregexp = XRegExp(pattern);
+        var regexp = new RegExp('\\b([^:/?\\s]+)://([^/?\\s]+)([^?\\s]*)\\??([^\\s]*)');
+        var xregexp   = XRegExp('\\b([^:/?\\s]+)://([^/?\\s]+)([^?\\s]*)\\??([^\\s]*)');
 
         suites.push(Benchmark.Suite('Regex object type')
             .add('RegExp object', function() {

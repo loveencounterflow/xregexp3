@@ -1,22 +1,17 @@
 {
-    "name": "xregexp3",
+    "name": "xregexp",
     "version": "3.0.0-pre",
-    "description": "temporary fork of Steven Levithan's XRegExp, to provide preview of version 3",
+    "description": "Extended regular expressions",
     "homepage": "http://xregexp.com/",
     "author": "Steven Levithan <steves_list@hotmail.com>",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/loveencounterflow/xregexp3"
+        "url": "https://github.com/slevithan/xregexp.git"
     },
-    "bugs": "https://github.com/slevithan/xregexp/issues",
     "keywords": [
         "regex",
-        "regexp",
-        "xregex",
-        "xregexp"
+        "regexp"
     ],
-    "readme": "temporary fork of Steven Levithan's XRegExp, to provide preview of version 3",
-    "readmeFilename": "README.md",
     "main": "./xregexp-all.js"
 }

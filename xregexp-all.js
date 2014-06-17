@@ -466,6 +466,7 @@ var XRegExp = (function(undefined) {
  * XRegExp(/regex/);
  */
     self = function(pattern, flags) {
+        console.log( '©343 XRegExp3', pattern );
         var _X_pattern = pattern;
         var context = {
                 hasNamedCapture: false,
